@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/apoorva":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/apoorva","hostpath":"/Users/workstation-02/Documents/apoorva","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/workstation-02/Documents/apoorva","disabled":false,"__vagrantfile":true}}}
