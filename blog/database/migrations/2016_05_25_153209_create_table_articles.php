@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesTable extends Migration
+class CreateTableArticles extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,9 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-
             $table->string('title');
-            $table->string('author_name');
-            $table->date_create('date_of_creation');
-            
+            $table->string('category');
+            $table->string('author');
             $table->timestamps();
         });
     }
