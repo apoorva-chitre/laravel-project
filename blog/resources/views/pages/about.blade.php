@@ -3,12 +3,11 @@
 
 @section('content')
 
-<h1> The about page goes here </h1>
+<h1><center>About Apoorva - yes that's me!</center></h1>
 
-<script>
 
-    alert('About Page displayed successfully!');
+<p>Welcome to my website. I have always believed that talent meets opportunity and Talent is that crazy combination of hard work, dedication, discipline and passion.</p>
 
-</script>
+
 
 @stop

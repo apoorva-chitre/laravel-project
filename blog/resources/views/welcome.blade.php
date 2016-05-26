@@ -3,6 +3,16 @@
 
 @section('content')
 
-<h1> The to do list page goes here </h1>
+<div><center>
+<h1>Apoorva Chitre</h1>
+<h4>Technology. Business. Lifestyle.</h4>
+<br>
 
+<a href="http://localhost:8000/articles">My Blog</a>
+<br>
+<br>
+<a href="http://localhost:8000/about">About Me</a>
+<br><br>
+<a href="http://localhost:8000/contact">Contact Me</a>
+</center></div>
 @stop

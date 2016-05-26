@@ -3,14 +3,14 @@
 
 @section('content')
 
-<h1> Apoorva Chitre's Blog </h1>
+<h1><center> Apoorva Chitre's Blog </center></h1>
 
 
 	@foreach ($articles as $article)
 
 		<div>
 
-			{ $article -> title }}
+			<a href = "/articles/{{ $article -> path() }}" >{{ $article -> title }}</a>
 			<br>
 			{{ $article -> category }}
 			<br>

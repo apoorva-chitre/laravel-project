@@ -3,6 +3,7 @@
 
 @section('content')
 
-	<h1>{{ $article->title}}
+<h1><center>Let's get connected!</center></h1>
+
 
 @stop
