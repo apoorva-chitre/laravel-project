@@ -11,9 +11,11 @@ class Comment extends Model
 	
     //relationship from comment to article
 
-    public function card() {
+    public function article() {
 
     	return $this ->belongsTo(Article::class);
 
     }
+
+    
 }

@@ -22,6 +22,12 @@ sites:
 databases:
     - homestead
 
+variables:
+    - key: APP_ENV
+      value: local
+    - key: DB_HOST_PORT
+      value: ":3306"
+
 # blackfire:
 #     - id: foo
 #       token: bar

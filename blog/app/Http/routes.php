@@ -25,3 +25,10 @@ Route::get('articles/{article}' , 'ArticlesController@show' );
 
 
 Route::post('articles/{article}/comments' , 'CommentsController@store');
+
+
+Route::post('/contacts' , 'ContactsController@store');
+
+Route::get('/comments/{comment}/edit', 'CommentsController@edit');
+
+Route::patch('comments/{comment}', 'CommentsController@update');

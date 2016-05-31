@@ -23,7 +23,8 @@
 
 				@foreach ($article->comments as $comment)
 
-				<li class ="list-group-item">{{ $comment->body }}</li>
+
+				<li class ="list-group-item">{{ $comment->body }}&nbsp;&nbsp;<a href = "/comments/{{$comment->id}}/edit"><button type = "submit" class = "btn btn-primary" value = "edit comment">Edit</button></a></li>
 
 				<hr>
 

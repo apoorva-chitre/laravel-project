@@ -26,4 +26,19 @@ class CommentsController extends Controller
 
     	return redirect('/articles/' . $article->id);
     }
+
+    public function edit (Comment $comment) {
+
+
+    	return view('comments.edit' , compact('comment'));
+
+    }
+
+    public function update(Request $request, Comment $comment, Article $article) {
+
+        $comment->update($request->all());
+
+
+        return redirect('/articles/' . $comment->article_id);
+    }
 }
