@@ -11,24 +11,32 @@
 |
 */
 
+Route::group(['middleware' => ['web']] , function () {
 
-Route::get('/' , 'PagesController@home');
-
-
-Route::get('/about' , 'PagesController@about');
-
-Route::get('/contact' , 'PagesController@contact');
-
-Route::get('articles' , 'ArticlesController@index');
-
-Route::get('articles/{article}' , 'ArticlesController@show' );
+	Route::get('/' , 'PagesController@home');
 
 
-Route::post('articles/{article}/comments' , 'CommentsController@store');
+	Route::get('/about' , 'PagesController@about');
+
+	Route::get('/contact' , 'PagesController@contact');
+
+	Route::get('articles' , 'ArticlesController@index');
+
+	Route::get('articles/{article}' , 'ArticlesController@show' );
 
 
-Route::post('/contacts' , 'ContactsController@store');
+	Route::post('articles/{article}/comments' , 'CommentsController@store');
 
-Route::get('/comments/{comment}/edit', 'CommentsController@edit');
 
-Route::patch('comments/{comment}', 'CommentsController@update');
+	Route::post('/contacts' , 'ContactsController@store');
+
+	Route::get('/comments/{comment}/edit', 'CommentsController@edit');
+
+	Route::patch('comments/{comment}', 'CommentsController@update');
+
+});
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

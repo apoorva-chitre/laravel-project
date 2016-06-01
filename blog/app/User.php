@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password',
     ];
 
     /**
@@ -24,9 +24,5 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function user() {
 
-        return $this -> belongsTo(Comment::class);
-
-    }
 }

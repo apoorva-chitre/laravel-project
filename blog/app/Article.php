@@ -14,6 +14,13 @@ class Article extends Model
 
     }
 
+    public function addComment(Comment $comment) {
+
+
+    	return $this->comments()->save($comment);
+
+
+    }
 
     public function path() {
 

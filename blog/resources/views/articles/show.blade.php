@@ -19,13 +19,29 @@
 
 			<h2>User Comments</h2>
 
-			<ul class ="list-group" >
+			<ul class ="list-group">
 
 				@foreach ($article->comments as $comment)
 
 
-				<li class ="list-group-item">{{ $comment->body }}&nbsp;&nbsp;<a href = "/comments/{{$comment->id}}/edit"><button type = "submit" class = "btn btn-primary" value = "edit comment">Edit</button></a></li>
+				<li class="list-group-item">
 
+					{{ $comment->body }}
+
+				<span class="pull-right">
+
+					@if ( $comment->user)
+					@if ( $comment->user->username )
+
+					<a href="#">{{ $comment->user->username }}</a>
+					@endif
+					@endif
+
+				</span>
+					&nbsp;&nbsp;
+					<a href = "/comments/{{$comment->id}}/edit"><button type = "submit" class = "btn btn-primary" value = "edit comment">Edit</button></a>
+				</li>
+				
 				<hr>
 
 				@endforeach
@@ -35,9 +51,11 @@
 
 			<form method = "POST" action = "/articles/{{ $article -> id }}/comments">
 
+
+
 				<div class = "form-group">
 
-				<textarea name = "body" class = "form-control"></textarea>
+				<textarea name = "body" class = "form-control">{{ old('body') }}</textarea>
 
 				<div class = "form-group">
 
@@ -48,6 +66,20 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 			</form>
+
+			@if (count($errors))
+
+				<ul>
+					@foreach ($errors->all() as $error)
+
+					<li>{{ $error }}</li>
+
+					@endforeach
+				</ul>
+
+			@endif
+
+
 
 		</div>
 	</div>

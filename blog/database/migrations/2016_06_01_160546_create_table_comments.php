@@ -15,12 +15,12 @@ class CreateTableComments extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->interger('user_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index();
 
             $table->integer('article_id')->unsigned()->index();
 
             $table->text('body');
-            
+
             $table->timestamps();
         });
     }

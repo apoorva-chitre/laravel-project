@@ -15,14 +15,24 @@ class CommentsController extends Controller
 
     public function store(Request $request, Article $article) {
 
+
+        $this -> validate($request, [
+
+
+            'body' => 'required|min:10'
+
+
+            ]);
+
     
+        $comment = new Comment($request->all());
 
-    	$comment = new Comment;
+
+        $comment->user_id = 1;
 
 
-    	$comment->body = $request->body;
+        $article->addComment($comment);
 
-    	$article->comments()->save($comment);
 
     	return redirect('/articles/' . $article->id);
     }
