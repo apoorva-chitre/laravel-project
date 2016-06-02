@@ -1,23 +1,33 @@
-@extends('layout')
+@extends('layouts.app')
 
 
 @section('content')
 
-<h1><center> Apoorva Chitre's Blog </center></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Apoorva Chitre's Blog</div>
 
+                <div class="panel-body">
+                    
+                	@foreach ($articles as $article)
 
-	@foreach ($articles as $article)
+					<div>
 
-		<div>
-
-			<a href = "/articles/{{ $article -> path() }}" >{{ $article -> title }}</a>
-			<br>
-			{{ $article -> category }}
-			<br>
-			{{ $article -> author }}
+						<a href = "/articles/{{ $article -> path() }}" >{{ $article -> title }}</a>
+						<br>
+						{{ $article -> category }}
+						<br>
+						{{ $article -> author }}
 			
-		</div><hr/>
+					</div><hr/>
 
-	@endforeach
+					@endforeach
 
-@stop
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

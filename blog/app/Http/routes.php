@@ -34,9 +34,11 @@ Route::group(['middleware' => ['web']] , function () {
 
 	Route::patch('comments/{comment}', 'CommentsController@update');
 
+	Route::auth();
+
+	Route::get('/home', 'HomeController@index');
+
+
 });
 
 
-Route::auth();
-
-Route::get('/home', 'HomeController@index');

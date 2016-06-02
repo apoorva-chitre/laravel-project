@@ -1,25 +1,37 @@
-@extends('layout')
+@extends('layouts.app')
 
 
 @section('content')
 
-<h1><center>Connect with me!</center></h1>
 
-<form method = "POST" action = "/pages/contact">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Connect with me!</h3></div>
 
-				<div class = "form-group">
+				<div class="panel-body">
+                   
+                    <form method = "POST" action = "/pages/contact">
 
-				Your Name:  <input type="text" class = "form-control" name="name" ><br>
-				Your Email:  <input type ="text" class = "form-control" name="email"></input><br>
+					<div class = "form-group">
 
-				Your Message:<br><textarea name = "message" class = "form-control"></textarea>
+						Your Name:  <input type="text" class = "form-control" name="name" ><br>
+						Your Email:  <input type ="text" class = "form-control" name="email"></input><br>
 
-				<br>
-				<button type = "submit" class = "btn btn-primary" value = "submit">Send</button>
+						Your Message:<br><textarea name = "message" class = "form-control"></textarea>
 
-				<input type="hidden" name="_token" value="{{ csrf_token() }}">
-				</div>
-</form>
+						<br>
+						<button type = "submit" class = "btn btn-primary" value = "submit">Send</button>
+
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					</div>
+					</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-@stop
+@endsection
