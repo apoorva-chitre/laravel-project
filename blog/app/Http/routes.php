@@ -18,17 +18,16 @@ Route::group(['middleware' => ['web']] , function () {
 
 	Route::get('/about' , 'PagesController@about');
 
-	Route::get('/contact' , 'PagesController@contact');
+	Route::get('/contact' , ['as' => 'contact', 'uses' => 'PagesController@createcontact']);
+
+	Route::post('/contact', ['as' => 'contact_store', 'uses' => 'PagesController@storecontact']);
 
 	Route::get('articles' , 'ArticlesController@index');
 
-	Route::get('articles/{article}' , 'ArticlesController@show' );
+	Route::any('articles/{article}' , 'ArticlesController@show' );
 
 
 	Route::post('articles/{article}/comments' , 'CommentsController@store');
-
-
-	Route::post('/contacts' , 'ContactsController@store');
 
 	Route::get('/comments/{comment}/edit', 'CommentsController@edit');
 

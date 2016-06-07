@@ -1,0 +1,542 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fun",
+				"function"
+			],
+			[
+				"uni",
+				"unique"
+			],
+			[
+				"article",
+				"article_id"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"art",
+				"article"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"Re",
+				"Request"
+			],
+			[
+				"arti",
+				"article_id"
+			],
+			[
+				"date",
+				"date_create"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "apoorva.sublime-project",
+			"settings":
+			{
+				"buffer_size": 446,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 360.0,
+		"selected_items":
+		[
+			[
+				"",
+				"File: Close All"
+			],
+			[
+				"xde",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 207.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/CommentsController.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_06_01_160546_create_table_comments.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_06_06_160428_create_table_comments.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/ArticlesController.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/pages/about.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/routes.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Article.php",
+		"/Users/workstation-02/Library/Application Support/Sublime Text 2/Packages/User/Xdebug.sublime-settings",
+		"/Users/workstation-02/Library/Application Support/Sublime Text 2/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/articles/show.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/Auth/AuthController.php",
+		"/Users/workstation-02/Documents/apoorva/blog/config/auth.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/articles/index.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/welcome.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/layouts/app.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/.env",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_31_180115_create_table_users.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/home.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_06_02_154720_create_table_users.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/User.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/HomeController.php",
+		"/Users/workstation-02/Desktop/apoorva.jpg",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Comment.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Console/Kernel.php",
+		"/Users/workstation-02/Documents/apoorva/blog/vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/Controller.php",
+		"/Users/workstation-02/Documents/apoorva/blog/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/comments/edit.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/ContactsController.php",
+		"/Users/workstation-02/Documents/apoorva/blog/vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php",
+		"/Users/workstation-02/Documents/apoorva/blog/config/database.php",
+		"/Users/workstation-02/Documents/apoorva/.env",
+		"/Users/workstation-02/Documents/apoorva/Homestead.yaml",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_26_154710_create_table_comments.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/notes/edit.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/pages/contact.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_31_135337_create_table_contacts.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/layout.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/views/show.blade.php",
+		"/Users/workstation-02/Documents/apoorva/blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php",
+		"/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers/PagesController.php",
+		"/Users/workstation-02/Documents/apoorva/blog/public/css/style.css",
+		"/Users/workstation-02/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/workstation-02/Documents/apoorva/blog/vendor/laravel/framework/src/Illuminate/Redis/Database.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_25_153209_create_table_articles.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_25_151348_create_table_articles.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_25_150606_create_table-articles.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_25_145318_create_table_articles.php",
+		"/Users/workstation-02/Documents/apoorva/blog/database/migrations/2016_05_25_142605_create_articles_table.php",
+		"/Users/workstation-02/Documents/apoorva/blog/resources/assets/sass/app.scss",
+		"/Users/workstation-02/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/workstation-02/Documents/apoorva/blog/storage/framework/views/8a60db6e96ff82e053921d2ef49461e06f72c102.php",
+		"/Users/workstation-02/Documents/apoorva/blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/workstation-02/Documents/apoorva/blog/resources/views/pages"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"username",
+			"build",
+			"untitled",
+			"Route",
+			"delete"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "apoorva.sublime-project",
+					"settings":
+					{
+						"buffer_size": 446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								446,
+								446
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"resources/views/pages/about.blade.php"
+			],
+			[
+				"article",
+				"app/Article.php"
+			],
+			[
+				"routes",
+				"app/Http/routes.php"
+			],
+			[
+				"comments",
+				"app/Http/Controllers/CommentsController.php"
+			],
+			[
+				"articles",
+				"app/Http/Controllers/ArticlesController.php"
+			],
+			[
+				"comm",
+				"app/Http/Controllers/CommentsController.php"
+			],
+			[
+				"authcon",
+				"app/Http/Controllers/Auth/AuthController.php"
+			],
+			[
+				"auth",
+				"config/auth.php"
+			],
+			[
+				"homecontroller",
+				"blog/app/Http/Controllers/HomeController.php"
+			],
+			[
+				"framework",
+				"vendor/laravel/framework/readme.md"
+			],
+			[
+				"authcontr",
+				"blog/app/Http/Controllers/Auth/AuthController.php"
+			],
+			[
+				"index.bl",
+				"blog/resources/views/articles/index.blade.php"
+			],
+			[
+				"index",
+				"blog/public/index.php"
+			],
+			[
+				"layouts.app",
+				"blog/resources/views/layouts/app.blade.php"
+			],
+			[
+				"home",
+				"blog/resources/views/home.blade.php"
+			],
+			[
+				"model",
+				"blog/database/factories/ModelFactory.php"
+			],
+			[
+				"users",
+				"blog/database/seeds/UsersTableSeeder.php"
+			],
+			[
+				"database",
+				"blog/database/seeds/DatabaseSeeder.php"
+			],
+			[
+				"home.",
+				"blog/resources/views/home.blade.php"
+			],
+			[
+				"routes.",
+				"app/Http/routes.php"
+			],
+			[
+				"config/mail",
+				"config/mail.php"
+			],
+			[
+				"cooments",
+				"app/Http/Controllers/CommentsController.php"
+			],
+			[
+				"show",
+				"resources/views/articles/show.blade.php"
+			],
+			[
+				"kernel.php",
+				"app/Console/Kernel.php"
+			],
+			[
+				"comment",
+				"app/Comment.php"
+			],
+			[
+				"validates",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php"
+			],
+			[
+				"control",
+				"app/Http/Controllers/Controller.php"
+			],
+			[
+				"show.bl",
+				"resources/views/articles/show.blade.php"
+			],
+			[
+				"illuminate/database/eloquent",
+				"vendor/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php"
+			],
+			[
+				"show.blade",
+				"resources/views/articles/show.blade.php"
+			],
+			[
+				"edit.",
+				"resources/views/comments/edit.blade.php"
+			],
+			[
+				"articles/sh",
+				"resources/views/articles/show.blade.php"
+			],
+			[
+				"show.blade.",
+				"resources/views/articles/show.blade.php"
+			],
+			[
+				"user",
+				"app/User.php"
+			],
+			[
+				"contac",
+				"app/Http/Controllers/ContactsController.php"
+			],
+			[
+				"my",
+				"vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php"
+			],
+			[
+				"contactscontroller",
+				"app/Http/Controllers/ContactsController.php"
+			],
+			[
+				"contact",
+				"app/Http/Controllers/ContactsController.php"
+			],
+			[
+				"contacts",
+				"app/Http/Controllers/ContactsController.php"
+			],
+			[
+				"edit.blade",
+				"resources/views/comments/edit.blade.php"
+			],
+			[
+				"rout",
+				"app/Http/routes.php"
+			],
+			[
+				"databas",
+				"config/database.php"
+			],
+			[
+				"comme",
+				"app/Http/Controllers/CommentsController.php"
+			],
+			[
+				"data",
+				"config/database.php"
+			],
+			[
+				"database.",
+				"config/database.php"
+			],
+			[
+				"layout",
+				"resources/views/layout.blade.php"
+			],
+			[
+				"artil",
+				"app/Article.php"
+			],
+			[
+				"database.php",
+				"config/database.php"
+			],
+			[
+				"connector.",
+				"vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php"
+			],
+			[
+				"pages",
+				"app/Http/Controllers/PagesController.php"
+			],
+			[
+				"arti",
+				"app/Http/Controllers/ArticlesController.php"
+			],
+			[
+				"connector",
+				"vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php"
+			],
+			[
+				"conne",
+				"vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php"
+			],
+			[
+				"connector.php",
+				"vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php"
+			],
+			[
+				"articles/index",
+				"resources/views/articles/index.blade.php"
+			],
+			[
+				"index.blade",
+				"resources/views/articles/index.blade.php"
+			],
+			[
+				"layou",
+				"resources/views/layout.blade.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 358.0,
+	"status_bar_visible": true
+}

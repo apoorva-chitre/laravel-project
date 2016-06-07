@@ -15,7 +15,6 @@ class CommentsController extends Controller
 
     public function store(Request $request, Article $article) {
 
-
         $this -> validate($request, [
 
 
@@ -27,13 +26,15 @@ class CommentsController extends Controller
     
         $comment = new Comment($request->all());
 
+        if ($request->user())
+        {
 
-        $comment->user_id = 1;
+            $comment->user_id = $request->user()->id;
 
+        }
 
-        $article->addComment($comment);
-
-
+        //$comment->user_id = Auth::user()->id;
+        echo $article->addComment($comment);
     	return redirect('/articles/' . $article->id);
     }
 

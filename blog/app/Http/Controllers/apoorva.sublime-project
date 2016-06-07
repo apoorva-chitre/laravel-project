@@ -1,0 +1,22 @@
+	"folders":
+	[
+		{
+			"path": "/Users/workstation-02/Documents/apoorva/blog"
+		},
+		{
+			"path": "/Users/workstation-02/Documents/apoorva/blog/app/Http/Controllers"
+		}
+	]
+}
+{
+
+"settings": {
+    "xdebug": {
+        "path_mapping": {
+            "/vagrant/public" : "/Users/[your user name]/[path to your project]/public",
+         },
+         "url": "http://localhost:8080/",
+         "super_globals": true,
+         "close_on_stop": true
+    }
+}

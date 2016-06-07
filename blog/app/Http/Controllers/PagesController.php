@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Html\FormFacade;
+
 class PagesController extends Controller
 {
     //
@@ -26,9 +28,15 @@ class PagesController extends Controller
 
     }
 
-    public function contact() {
+    public function createcontact() {
 
     	return view('pages.contact');
+
+    }
+
+    public function storecontact() {
+
+        //
 
     }
 }

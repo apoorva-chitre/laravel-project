@@ -57,7 +57,7 @@
 
 				<div class = "form-group">
 
-				<textarea name = "body" class = "form-control">{{ old('body') }}</textarea>
+				<textarea name = "body" class = "form-control"></textarea>
 
 				<div class = "form-group">
 

@@ -11,8 +11,15 @@
                 <div class="panel-heading"><h3>Connect with me!</h3></div>
 
 				<div class="panel-body">
+
+					<ul>
+   					 	@foreach($errors->all() as $error)
+        				<li>{{ $error }}</li>
+    					@endforeach
+					</ul>
                    
-                    <form method = "POST" action = "/pages/contact">
+                    
+                    <form method = "POST" action = "/contacts">
 
 					<div class = "form-group">
 
