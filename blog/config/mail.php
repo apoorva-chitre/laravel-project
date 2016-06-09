@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', '127.0.0.1'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 1025),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => "support@laracasts.com", 'name' => 'Laracasts Support'],
+    'from' => ['address' => 'apoorva@example.com', 'name' => 'Contact form message'],
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -108,5 +108,6 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+    'pretend' => false,
 
 ];

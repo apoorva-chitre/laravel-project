@@ -51,7 +51,7 @@
 
 							<h3>Add a new Comment<h3>
 
-			<form method = "POST" action = "/articles/{{ $article -> id }}/comments">
+			<form id="add-comment" method = "POST" action = "/articles/{{ $article -> id }}/comments">
 
 
 
@@ -68,6 +68,7 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 			</form>
+
 
 			@if (count($errors))
 

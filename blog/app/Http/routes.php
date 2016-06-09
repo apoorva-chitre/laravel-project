@@ -22,7 +22,18 @@ Route::group(['middleware' => ['web']] , function () {
 
 	Route::post('/contact', ['as' => 'contact_store', 'uses' => 'PagesController@storecontact']);
 
-	Route::get('articles' , 'ArticlesController@index');
+	
+
+	Route::auth();
+
+	Route::get('/home', 'HomeController@index');
+
+
+});
+
+Route::group(['middleware' => ['auth']] , function () {
+
+Route::get('articles' , 'ArticlesController@index');
 
 	Route::any('articles/{article}' , 'ArticlesController@show' );
 
@@ -33,9 +44,7 @@ Route::group(['middleware' => ['web']] , function () {
 
 	Route::patch('comments/{comment}', 'CommentsController@update');
 
-	Route::auth();
 
-	Route::get('/home', 'HomeController@index');
 
 
 });
