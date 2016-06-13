@@ -3,6 +3,40 @@
 
 @section('content')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+        $('#add-comment').on('submit' , function(e) {
+
+        	e.preventDefault();
+
+            $.ajax({
+
+                type: "POST",
+                url: "/articles/{{ $article -> id }}/comments",
+                data : {newComment: $('#new-comment').val()},
+                success: function(data) {
+
+                    alert(data);
+                },
+
+        		error: function() {
+         		$('#add-comment').html('<p>An error has occurred</p>');
+     		 },
+
+     		 complete: function(){
+     			$('#add-comment').html('<p>it worked!</p>');
+  			 }
+
+            });
+
+            return false;
+
+        });
+
+    </script>
+
 
 <div class="container">
     <div class="row">
@@ -21,7 +55,7 @@
 
 					<h2>User Comments</h2>
 
-				<ul class ="list-group">
+				<ul class ="list-group" id="comment">
 
 				@foreach ($article->comments as $comment)
 
@@ -41,7 +75,8 @@
 
 				</span>
 					&nbsp;&nbsp;
-					<a href = "/comments/{{$comment->id}}/edit"><button type = "submit" class = "btn btn-primary" value = "edit comment">Edit</button></a>
+					<a href = "/comments/{{$comment->id}}/edit"><button type = "submit" class = "btn btn-primary btn-xs" value = "edit comment">Edit</button></a>
+					
 				</li>
 				
 				<hr>
@@ -51,13 +86,13 @@
 
 							<h3>Add a new Comment<h3>
 
-			<form id="add-comment" method = "POST" action = "/articles/{{ $article -> id }}/comments">
+			<form id="add-comment" method = "POST">
 
 
 
 				<div class = "form-group">
 
-				<textarea name = "body" class = "form-control"></textarea>
+				<textarea name = "body" id = "new-comment" class = "form-control"></textarea>
 
 				<div class = "form-group">
 

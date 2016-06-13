@@ -24,7 +24,7 @@ class CommentsController extends Controller
             ]);
 
     
-        $comment = new Comment($request->all());
+        $comment = new Comment($request->newComment);
 
         if ($request->user())
         {

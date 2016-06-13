@@ -29,4 +29,13 @@ class ArticlesController extends Controller
     	return view('articles.show' , compact('article'));
 
     }
+
+    public function delete($article_id) {
+
+    	$article = Article::where('id', $article_id)->first();
+    	$article->delete();
+
+    	return redirect('/articles');
+
+    }
 }

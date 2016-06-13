@@ -16,12 +16,17 @@
 					<div>
 
 						<a href = "/articles/{{ $article -> path() }}" >{{ $article -> title }}</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href = "/articles/{{ $article -> id }}/delete"><button class="btn btn-danger btn-xs" name = "deleteArticle">Delete</button></a>
+                   
 						<br>
 						{{ $article -> category }}
 						<br>
 						{{ $article -> author }}
 			
-					</div><hr/>
+					</div>
+
+                    <hr/>
 
 					@endforeach
 

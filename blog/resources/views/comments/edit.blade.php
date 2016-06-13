@@ -1,9 +1,16 @@
-@extends('layout')
+@extends('layouts.app')
 
 
 @section('content')
 
-	<h1>Edit the Comment</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+
+	<div class="panel-heading"><h1>Edit the Comment</h1></div>
+
+	 <div class="panel-body">
 
 	<form method = "POST" action = "/comments/{{$comment->id}}">
 
@@ -21,6 +28,11 @@
 
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-			</form>
+	</form>
+	  </div>
+			</div>
+		</div>
+	</div>		
+</div>
 
 @stop

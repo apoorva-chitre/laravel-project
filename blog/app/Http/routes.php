@@ -44,8 +44,7 @@ Route::get('articles' , 'ArticlesController@index');
 
 	Route::patch('comments/{comment}', 'CommentsController@update');
 
-
-
+	Route::get('/articles/{article}/delete', 'ArticlesController@delete');
 
 });
 
