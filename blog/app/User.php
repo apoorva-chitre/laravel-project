@@ -2,10 +2,9 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\User;
 
-class User extends Authenticatable
-{
+class User extends User {
     /**
      * The attributes that are mass assignable.
      *
@@ -23,6 +22,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function articles() {
+
+
+        return $this->hasMany(Article::class);
+    }
 
 
 }

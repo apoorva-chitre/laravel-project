@@ -38,4 +38,26 @@ class ArticlesController extends Controller
     	return redirect('/articles');
 
     }
+
+    public function  showCreate() {
+
+        return view('articles.create' , compact('article'));
+
+    }
+
+    public function create(Request $request){
+
+            $article = new Article;
+
+            $article->body = $request['article-body'];
+
+            $article->category = $request['category'];
+
+            $article->title = $request['title'];
+
+            $request->user()->articles()->save($article);
+
+        return redirect('/articles');
+
+    }
 }

@@ -35,7 +35,13 @@ Route::group(['middleware' => ['auth']] , function () {
 
 Route::get('articles' , 'ArticlesController@index');
 
+	Route::get('/articles/create' , 'ArticlesController@showCreate');
+
+	Route::post('articles/create', 'ArticlesController@create');
+
 	Route::any('articles/{article}' , 'ArticlesController@show' );
+
+	
 
 
 	Route::post('articles/{article}/comments' , 'CommentsController@store');

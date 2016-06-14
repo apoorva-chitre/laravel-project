@@ -27,4 +27,10 @@ class Article extends Model
     	return $this->id;
 
     }
+
+    public function user() {
+
+        return $this->belongsTo(User::class);
+
+    }
 }
