@@ -18,7 +18,7 @@
 
 				<div class = "form-group">
 
-				<textarea name = "body" class = "form-control">{{ $comment->body }}</textarea>
+				<textarea name = "body" class = "form-control" >{{ $comment->body }}</textarea>
 
 				<div class = "form-group">
 

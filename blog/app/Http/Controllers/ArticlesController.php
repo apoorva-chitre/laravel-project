@@ -8,13 +8,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
+
+
 class ArticlesController extends Controller
 {
     //
+    
+
 
     public function index() {
 
-    	$articles = Article::all();
+    	$articles = Article::orderBy('created_at' , 'desc')->get();
 
     	return view('articles.index', compact('articles'));
 
@@ -47,6 +52,14 @@ class ArticlesController extends Controller
 
     public function create(Request $request){
 
+            $this-> validate($request, [
+
+            'article-body' => 'required|max:2000',
+            'category' => 'required',
+            'title' => 'required'
+
+            ]);
+
             $article = new Article;
 
             $article->body = $request['article-body'];
@@ -55,9 +68,24 @@ class ArticlesController extends Controller
 
             $article->title = $request['title'];
 
-            $request->user()->articles()->save($article);
+            $message = 'There was an error creating an new article';
 
-        return redirect('/articles');
+            if($request->user()->articles()->save($article)){
+
+
+                $message = 'Article Successfully created!';
+
+            }
+
+        return redirect('/articles')->with(['message' => $message]);
 
     }
+
+    public function edit(Request $request) {
+
+        return response()->json(['message' => $request['articleId']]);
+
+
+    }
+
 }

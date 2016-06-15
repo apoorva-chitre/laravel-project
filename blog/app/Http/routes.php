@@ -41,7 +41,7 @@ Route::get('articles' , 'ArticlesController@index');
 
 	Route::any('articles/{article}' , 'ArticlesController@show' );
 
-	
+	Route::post('articles/{article}/edit' , 'ArticlesController@edit' );
 
 
 	Route::post('articles/{article}/comments' , 'CommentsController@store');

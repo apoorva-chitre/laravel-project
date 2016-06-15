@@ -2,6 +2,7 @@
 
 
 @section('content')
+	@include('message-block')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
@@ -44,7 +45,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><h1>{{ $article -> title}} </h1></div>
 
-                <div class="panel-body">
+                <div class="panel-body" >
                     <h3>Category: {{ $article -> category }} &emsp;&emsp; Author: {{ $article ->user->name }} </h3>
 	
 					<p>
@@ -103,19 +104,6 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 			</form>
-
-
-			@if (count($errors))
-
-				<ul>
-					@foreach ($errors->all() as $error)
-
-					<li>{{ $error }}</li>
-
-					@endforeach
-				</ul>
-
-			@endif
 
                 </div>
             </div>

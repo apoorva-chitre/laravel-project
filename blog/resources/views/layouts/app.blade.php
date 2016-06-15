@@ -23,15 +23,42 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        .error, .success {
+
+            text-align: center;
+            margin-bottom: 5px;
+
+        }
+
+        .error {
+
+                border : 1px solid red;
+                background-color: #f9b5af;
+                color:red;
+
+        }
+
+        .error ul {
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .success {
+
+
+            border : 1px solid green;
+            background-color: #d1f9da;
+            color: green;
+        }
+
     </style>
 </head>
 <body id="app-layout">
 
-    @if(Session::has('message'))
-    <div class="alert alert-info">
-      {{Session::get('message')}}
-    </div>
-    @endif
+    
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -85,6 +112,7 @@
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src= "{{ URL::to('js/app.js') }}"></script>
     
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}

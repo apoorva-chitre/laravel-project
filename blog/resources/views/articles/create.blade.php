@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('message-block')
+
 <div class= "container">
 
 	<div class="row">

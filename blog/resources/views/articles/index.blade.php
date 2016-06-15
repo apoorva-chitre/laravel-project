@@ -32,27 +32,30 @@
                     
                 	@foreach ($articles as $article)
 
+                    <article class ="article" data-articleId = "{{ $article->id }}" data-articleTitle = "{{ $article->title }}" data-articleCategory = "{{ $article->category }}" data-articleBody = "{{ $article->body }}">
+
 					<div>
 
 						<a href = "/articles/{{ $article -> path() }}" >{{ $article -> title }}</a>
                    
 						<br>
-						{{ $article -> category }}
+						Category :{{ $article -> category }}
 						<br>
-						{{ $article -> author }}
+						By {{ $article ->user->name }}
 			
 					</div>
                     <div id="article-menu">
 
                         <a href="#">Like</a>|
-                        <a href="#">Dislike</a>|
-                        <a href="#">Edit</a>|
+                        <a href="#">Dislike</a>
+                        @if(Auth::user() == $article->user)
+                        |<a href="#" id="edit-article-button">Edit</a>|
                         <a href = "/articles/{{ $article -> id }}/delete">Delete</a>
-
+                        @endif
                     </div>
 
                     <hr/>
-
+                    </article>
 					@endforeach
 
                 </div>
@@ -60,4 +63,49 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="edit-article-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit Article</h4>
+      </div>
+      <div class="modal-body">
+
+        <form>
+            <div class="form-group">
+
+                <input type="text" name="title" id="article-title-edit" style="width: 552px; padding: 4px;">
+
+            </div>
+
+            <div class= "form-group">
+
+                <input type="text" name="category" id="article-category-edit" style="width: 552px; padding: 4px;">
+            
+            </div>
+
+            <div class= "form-group">
+
+                <textarea name = "article-body" class = "form-control" id ="article-body-edit" rows="5"></textarea>
+            
+            </div>
+
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id= "modal-save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var token = '{{Session::token() }}';
+var url = {{ route('/articles//edit') }};
+</script>
 @endsection
