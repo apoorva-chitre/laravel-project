@@ -49,7 +49,7 @@
                         <a href="#">Like</a>|
                         <a href="#">Dislike</a>
                         @if(Auth::user() == $article->user)
-                        |<a href="#" id="edit-article-button">Edit</a>|
+                        |<a href="#" class="edit-article-button" data-article-id="{{ $article -> id }}">Edit</a>|
                         <a href = "/articles/{{ $article -> id }}/delete">Delete</a>
                         @endif
                     </div>
@@ -106,6 +106,5 @@
 
 <script>
 var token = '{{Session::token() }}';
-var url = {{ route('/articles//edit') }};
 </script>
 @endsection

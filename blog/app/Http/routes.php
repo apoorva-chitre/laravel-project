@@ -41,7 +41,7 @@ Route::get('articles' , 'ArticlesController@index');
 
 	Route::any('articles/{article}' , 'ArticlesController@show' );
 
-	Route::post('articles/{article}/edit' , 'ArticlesController@edit' );
+	Route::post('/articles/{article}/edit' , ['as' => 'articles-edit', 'uses' => 'ArticlesController@edit']);
 
 
 	Route::post('articles/{article}/comments' , 'CommentsController@store');
@@ -51,6 +51,29 @@ Route::get('articles' , 'ArticlesController@index');
 	Route::patch('comments/{comment}', 'CommentsController@update');
 
 	Route::get('/articles/{article}/delete', 'ArticlesController@delete');
+
+	Route::get('/account' , [
+
+		'uses' => 'UsersController@getAccount',
+		'as' => 'account'
+
+		]);
+
+	Route::get('/userimage/{filename}', [
+
+		'uses' => 'UsersController@getUserImage',
+		'as' => 'account.image'
+
+		]);
+
+	Route::post('/updateaccount', [
+
+		'uses' => 'UsersController@saveAccount',
+		'as' => 'account.save'
+
+		]);
+
+	
 
 });
 

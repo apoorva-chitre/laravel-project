@@ -1,17 +1,18 @@
 var article_Id = 0;
 
-$('.article').find('#article-menu').find('#edit-article-button').on('click', function (e) {
+$('.edit-article-button').on('click', function (e) {
 
 	e.preventDefault();
 
+	var articleData = e.target.parentNode.parentNode.childNodes[1].textContext;
 
-	article_Id = event.target.parentNode.parentNode.dataset['articleId'];
+	var article_Id = articleData.dataset['articleId'];
 
-	var article_title = event.target.parentNode.parentNode.dataset['articleTitle'];
+	var article_title = e.target.parentNode.parentNode.dataset['articleTitle'];
 
-	var article_category = event.target.parentNode.parentNode.dataset['articleCategory'];
+	var article_category = e.target.parentNode.parentNode.dataset['articleCategory'];
 
-	var article_body = event.target.parentNode.parentNode.dataset['articleBody'];
+	var article_body = e.target.parentNode.parentNode.dataset['articleBody'];
 
 
 	$('#article-title-edit').val(article_title);
@@ -29,14 +30,14 @@ $('#modal-save').on('click', function(){
 	$.ajax({
 
 		method: 'POST',
-		url: url,
+		url: urlEdit,
 		data: {body: $('#article-body-edit').val(), articleId: article_Id, _token: token }
 
 	})
 
 	.done(function (msg) {
 
-		console.log(msg['message']);
+		console.log(JSON.stringify(msg);
 	});
 })
 

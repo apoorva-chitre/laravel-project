@@ -18,7 +18,7 @@ class ArticlesController extends Controller
 
 
     public function index() {
-
+        $url = route('articles-edit', ['article' => 1]);
     	$articles = Article::orderBy('created_at' , 'desc')->get();
 
     	return view('articles.index', compact('articles'));
@@ -83,7 +83,21 @@ class ArticlesController extends Controller
 
     public function edit(Request $request) {
 
-        return response()->json(['message' => $request['articleId']]);
+        $this->validate($request, [
+
+            'body' => 'required',
+            'title' => 'required',
+            'category' => 'required'
+
+            ]);
+
+        $article = Article::find($request['articleId']);
+        $article->body = $request['body'];
+        $article->title = $request['title'];
+        $article->category = $request['category'];
+        $article->update();
+
+        return response()->json(['messsage' => 'edit successful'], 200);
 
 
     }

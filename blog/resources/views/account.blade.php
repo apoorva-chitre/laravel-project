@@ -12,7 +12,7 @@
 
 	 <div class="panel-body">
 
-	<form method = "POST" action = "account.save">
+	<form method = "POST" action = " {{ route('account.save') }}" enctype="multipart/form-data">
 
 
 				<div class = "form-group">
@@ -23,18 +23,35 @@
 
 				<div class = "form-group">
 
-					<label for=""
+					<label for="name">Email: </label>
+					<input type ="text" name="email" class="form-control" value="{{ $user->email}}" id="email">
+				</div>
+
+				<div class = "form-group">
+
+					<label for="image"> Image (only .jpg)</label>
+					<input type= "file" name="image" class= "form-control" id="image">
 
 				</div>
 
 				<br>
 
-				<button type = "submit" class = "btn btn-primary" value = "Add Comment">Update Comment</button>
+				<button type = "submit" class = "btn btn-primary" >Save Account</button>
 
-				<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+				<input type="hidden" name="_token" value="{{ Session::token() }}">
 	</form>
 	  </div>
+
+	  @if (Storage::disk('local')->has( $user->name . '-' . $user->id . '.jpg'))
+	  	<section class= "row-new-post">
+
+	  		<div class= "col-md-6 col-md-offset-3">
+
+	  			<img src= "{{ route('account.image', ['filename' => $user->name . '-' . $user->id . '.jpg']) }}" alt= "" class= "img-responsive">
+
+	  		</div>
+	  	</section>
+	  	@endif
 			</div>
 		</div>
 	</div>		
