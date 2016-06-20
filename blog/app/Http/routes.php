@@ -73,6 +73,12 @@ Route::get('articles' , 'ArticlesController@index');
 
 		]);
 
+	Route::post('/like' , [
+
+		'uses' => 'ArticlesController@likeArticle',
+		'as' => 'like'
+		]);
+
 	
 
 });

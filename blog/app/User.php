@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User;
 
+use Illuminate\Database\Eloquent\Model;
+
 class User extends User {
     /**
      * The attributes that are mass assignable.
@@ -29,5 +31,11 @@ class User extends User {
         return $this->hasMany(Article::class);
     }
 
+    public function likes() {
+
+
+        return $this->hasMany(Like::class);
+        
+    }
 
 }

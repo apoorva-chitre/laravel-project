@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Article;
 
+use App\Like;
+
+use App\User;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -99,6 +103,59 @@ class ArticlesController extends Controller
 
         return response()->json(['messsage' => 'edit successful'], 200);
 
+
+    }
+
+    public function likeArticle(Request $request){
+
+        $article_id = $request['articleId'];
+        $is_like = $request['isLike'] === 'true';
+        $update = false;
+        $article = Article::find($article_id);
+        if (!$article) {
+
+            return null;
+
+        }
+
+        $user = Auth::user();
+
+        $like = $user->likes()->where('article_id', $article_id)->first();
+
+        if($like) {
+
+            $already_like = $like->like;
+            $update = true;
+
+            if($already_like == $is_like) {
+
+                $like->delete();
+                return null;
+
+            }
+
+        } else {
+
+            $like = new Like();
+
+        }
+
+        $like->like = $is_like;
+        $like->user_id = $user->id;
+        $like->article_id = $article->id;
+
+        if($update) {
+
+            $like->update();
+
+        } else {
+
+            $like->save();
+
+
+        } 
+
+        return null;
 
     }
 

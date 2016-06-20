@@ -46,8 +46,8 @@
 					</div>
                     <div id="article-menu">
 
-                        <a href="#">Like</a>|
-                        <a href="#">Dislike</a>
+                        <a href="#" class="like">{{ Auth::user()->likes()->where('article_id', $article->id)->first() ? Auth::user()->likes()->where('article_id', $article->id)->first()->like == 1 ? 'You like this post' : 'Like' : 'Like'  }}</a>|
+                        <a href="#" class="like">{{ Auth::user()->likes()->where('article_id', $article->id)->first() ? Auth::user()->likes()->where('article_id', $article->id)->first()->like == 0 ? 'You don\'t like this post' : 'Dislike' : 'Dislike'  }}</a>
                         @if(Auth::user() == $article->user)
                         |<a href="#" class="edit-article-button" data-article-id="{{ $article -> id }}">Edit</a>|
                         <a href = "/articles/{{ $article -> id }}/delete">Delete</a>
@@ -106,5 +106,6 @@
 
 <script>
 var token = '{{Session::token() }}';
+var urlLike = "{{ route('like') }}";
 </script>
 @endsection
