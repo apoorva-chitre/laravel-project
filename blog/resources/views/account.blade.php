@@ -14,9 +14,18 @@
 
 	<form method = "POST" action = " {{ route('account.save') }}" enctype="multipart/form-data">
 
+				@if (Storage::disk('local')->has( $user->name . '-' . $user->id . '.jpg'))
+	  				<section class= "row-new-post">
+
+	  					<center><img src= "{{ route('account.image', ['filename' => $user->name . '-' . $user->id . '.jpg']) }}" alt= "" class= "img-responsive" style= "height:300px; width:300px;"></center>
+	  					<br>
+	  		
+	  				</section>
+	  			@endif
+
 
 				<div class = "form-group">
-
+					
 					<label for="name">Name: </label>
 					<input type ="text" name="name" class="form-control" value="{{ $user->name}}" id="name">
 				</div>
@@ -42,16 +51,7 @@
 	</form>
 	  </div>
 
-	  @if (Storage::disk('local')->has( $user->name . '-' . $user->id . '.jpg'))
-	  	<section class= "row-new-post">
-
-	  		<div class= "col-md-6 col-md-offset-3">
-
-	  			<img src= "{{ route('account.image', ['filename' => $user->name . '-' . $user->id . '.jpg']) }}" alt= "" class= "img-responsive">
-
-	  		</div>
-	  	</section>
-	  	@endif
+	  
 			</div>
 		</div>
 	</div>		
