@@ -6,37 +6,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
-<script type="text/javascript">
-
-        $('#add-comment').on('submit' , function(e) {
-
-        	e.preventDefault();
-
-            $.ajax({
-
-                type: "POST",
-                url: "/articles/{{ $article -> id }}/comments",
-                data : {newComment: $('#new-comment').val()},
-                success: function(data) {
-
-                    alert(data);
-                },
-
-        		error: function() {
-         		$('#add-comment').html('<p>An error has occurred</p>');
-     		 },
-
-     		 complete: function(){
-     			$('#add-comment').html('<p>it worked!</p>');
-  			 }
-
-            });
-
-            return false;
-
-        });
-
-    </script>
+<script src ="/js/app.js"></script>
 
 
 <div class="container">
@@ -56,7 +26,7 @@
 
 					<h2>User Comments</h2>
 
-				<ul class ="list-group" id="comment">
+				<ul class ="list-group" id="comments">
 
 				@foreach ($article->comments as $comment)
 
@@ -87,19 +57,19 @@
 
 							<h3>Add a new Comment<h3>
 
-			<form id="add-comment" method = "POST">
+			<form class="add-comment" method = "POST">
 
 
 
 				<div class = "form-group">
 
-				<textarea name = "body" id = "new-comment" class = "form-control"></textarea>
+				<textarea name = "body" class = "form-control" id="comment"></textarea>
 
 				<div class = "form-group">
 
 				<br>
 
-				<button type = "submit" class = "btn btn-primary" value = "Add Comment">Add Comment</button>
+				<button  id ="new-comment" type = "submit" class = "btn btn-primary" value = "Add Comment">Add Comment</button>
 
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 

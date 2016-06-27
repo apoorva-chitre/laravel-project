@@ -4,9 +4,8 @@ $('.edit-article-button').on('click', function (e) {
 
 	e.preventDefault();
 
-	var articleData = e.target.parentNode.parentNode.childNodes[1].textContext;
 
-	var article_Id = articleData.dataset['articleId'];
+	var article_Id = e.target.parentNode.parentNode.dataset['articleid'];
 
 	var article_title = e.target.parentNode.parentNode.dataset['articleTitle'];
 
@@ -44,7 +43,7 @@ $('.like').on('click' , function(e) {
 	e.preventDefault();
 
 
-	var article_Id = e.target.parentNode.parentNode.dataset['articleId'];
+	var article_Id = e.target.parentNode.parentNode.dataset['articleid'];
 
 	var isLike = e.target.previousElementSibling == null;
 
@@ -52,11 +51,45 @@ $('.like').on('click' , function(e) {
 
 		method: 'POST',
 		url: urlLike,
-		data: {isLike: isLike, articleId: article_Id, _token: token}
-	}).done(function(){
+		data: {isLike: isLike, articleId: article_Id, _token: token},
+		success: function() {
 
-		//change the page
+			$('.like').html('<p>You like this </p>');
+
+		},
+
+		failure: function() {
+
+			$('.like').html('<p> 503 error </p>');
+		}
+
 	});
 
 });
+
+        $('#new-comment').on('click' , function(e) {
+
+        	e.preventDefault();
+
+            $.ajax({
+
+                type: "POST",
+                url: "/articles/{{ $article -> id }}/comments",
+                success: function(data) {
+
+                   console.log(data);
+                },
+
+        		error: function() {
+         		$('#add-comment').html('<p>An error has occurred</p>');
+     		 }
+
+            });
+
+            return false;
+
+        });
+
+
+
 

@@ -107,5 +107,6 @@
 <script>
 var token = '{{Session::token() }}';
 var urlLike = "{{ route('like') }}";
-</script>
+var urlEdit = "{{ route('articles-edit') }}";
+ </script>
 @endsection

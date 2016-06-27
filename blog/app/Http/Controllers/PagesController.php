@@ -73,9 +73,9 @@ class PagesController extends Controller
 
         }
 
-        else {
+       else {
 
-        return back();
+       return back();
 
     }
 }
