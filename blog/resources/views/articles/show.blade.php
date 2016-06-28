@@ -3,7 +3,8 @@
 
 @section('content')
 	@include('message-block')
-
+	
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 <script src ="/js/app.js"></script>
@@ -74,6 +75,12 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 			</form>
+
+			<script>
+				
+				var urlComment = "{{ route('newcomment', $article->id) }}";
+
+			</script>
 
                 </div>
             </div>

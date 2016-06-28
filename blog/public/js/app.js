@@ -13,6 +13,8 @@ $('.edit-article-button').on('click', function (e) {
 
 	var article_body = e.target.parentNode.parentNode.dataset['articleBody'];
 
+	
+
 
 	$('#article-title-edit').val(article_title);
 
@@ -69,19 +71,23 @@ $('.like').on('click' , function(e) {
 
         $('#new-comment').on('click' , function(e) {
 
+        	var commentData = $('#comment').html;
+
         	e.preventDefault();
 
             $.ajax({
 
                 type: "POST",
-                url: "/articles/{{ $article -> id }}/comments",
+                url: urlComment,
+                data: { comment:commentData },
                 success: function(data) {
 
-                   console.log(data);
+                	$('.add-comment').html(data);
+                   
                 },
 
         		error: function() {
-         		$('#add-comment').html('<p>An error has occurred</p>');
+         		$('.add-comment').html('<p>An error has occurred</p>');
      		 }
 
             });

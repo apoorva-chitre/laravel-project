@@ -10,11 +10,14 @@
 
                 <div class="panel-body">
 
+                <div class="jumbotron">
+  
+
+
                     <center><iframe width="700" height="450" src="https://www.youtube.com/embed/iANtc3me37Q" frameborder="0" allowfullscreen></iframe></center>
-                    <div>
-                        
-                    Welcome to my website. I have always believed that talent meets opportunity and Talent is that crazy combination of hard work, dedication, discipline and passion.
+                    
                 </div>
+                        
             </div>
         </div>
     </div>

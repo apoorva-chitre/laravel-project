@@ -44,7 +44,12 @@ Route::get('articles' , 'ArticlesController@index');
 	Route::post('/articles/{article}/edit' , ['as' => 'articles-edit', 'uses' => 'ArticlesController@edit']);
 
 
-	Route::post('articles/{article}/comments' , 'CommentsController@store');
+	Route::post('articles/{article}/comments' , [
+
+		'uses' => 'CommentsController@store',
+		'as' => 'newcomment'
+
+		]);
 
 	Route::get('/comments/{comment}/edit', 'CommentsController@edit');
 
